@@ -1,36 +1,34 @@
 # Задача №1
 
-def task_1(a, b, c, d, e)->int:
-    return a*a
-a: int = 3
-b: float = 3.5
-c: str = 'строка'
-d: list = [1, 2]
-e: bool = True
+def task_1()-> None:
 
-print(f'Тип a:, {type(a)}')
-print(f'Тип b:, {type(b)}')
-print(f'Тип c:, {type(c)}')
-print(f'Тип d:, {type(d)}')
-print(f'Тип e:, {type(e)}')
+     a: int = 3
+     b: float = 3.5
+     c: str = 'строка'
+     d: list = [1, 2]
+     e: bool = True
 
-print(task_1(a,b,c,d,e))
+     print(f'Тип a:, {type(a)}')
+     print(f'Тип b:, {type(b)}')
+     print(f'Тип c:, {type(c)}')
+     print(f'Тип d:, {type(d)}')
+     print(f'Тип e:, {type(e)}')
+
+task_1()
+
 
 # Задача №2
 
-a:list = [1, 2, 3, 5, 8, 13, 21]
-print("a[0:3] = ", a[0:3])
+def task_2()-> None:
 
-def task_2(a:list)->int:
-    return len(a)
+    a = [1, 2, 3, 5, 8, 13, 21]
 
-print(task_2([1,2,3,5,8]))
+    print(f'\nПервые три значения:, {a[:3]}')
+
+task_2()
+
 
 # Задача №3
-
-def task_3(x):
-    return x*x
-print(task_3(4))
 
 x: int = 5
 
