@@ -1,24 +1,21 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+
+def check_elements('https://saucedemo.com/', username_locator, password_locator, login_locator):
+
+
 driver = webdriver.Chrome()
 driver.get("https://saucedemo.com/")
 
-#Поиск элемента
-icon = driver.find_element(By.CSS_SELECTOR, '#user-name')
-if icon is None:
-    print('Элемент не найден')
-else:
-    print('Элемент найден')
 
-icon1 = driver.find_element(By.CSS_SELECTOR, '#password')
-if icon is None:
-    print('Элемент не найден')
-else:
-    print('Элемент найден')
+username_field = driver.find_element(By.CSS_SELECTOR, '#user-name')
 
-btn = driver.find_element(By.CSS_SELECTOR, '#login-button')
-if btn is None:
-    print('Элемент не найден')
+password_field = driver.find_element(By.CSS_SELECTOR, '#password')
+
+login_button = driver.find_element(By.CSS_SELECTOR, '#login-button')
+
+if username_field and  password_field and login_button:
+    print('Элементы найдены')
 else:
-    print('Элемент найден')
+    print('Элементы не найдены')
